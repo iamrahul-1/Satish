@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import { BiCamera, BiCameraOff } from "react-icons/bi";
 import { Link } from "react-router-dom";
-import logo from "./../../assets/logo.png";
+// import logo from "./../../assets/logo.png";
+import logo from "../../assets/Asset-1.ico";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,8 +28,8 @@ const Navbar = () => {
 
   return (
     <nav className="fixed left-0 top-0 w-full backdrop-blur-sm bg-black/30 border border-black/20 rounded-lg px-2 py-4 shadow-lg">
-      <div className="flex justify-between items-center">
-        <img src={logo} className="w-auto h-9" alt="logo" />
+      <div className="flex justify-between items-center pr-8">
+        <img src={logo} className="w-auto h-9 ml-8" alt="logo" />
         <div className="hidden md:flex space-x-4">
           <Link
             href="/"
@@ -88,7 +89,7 @@ const Navbar = () => {
         </div>
       </div>
       <div
-        className={`md:hidden flex flex-col space-y-2 mt-2 ${
+        className={`md:hidden flex flex-col space-y-2 mt-2 pl-8 ${
           isOpen ? "slide-in" : "slide-out"
         }`}
       >
