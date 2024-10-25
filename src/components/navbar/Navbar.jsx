@@ -26,14 +26,14 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className="fixed left-0 top-0 w-full backdrop-blur-sm bg-white/30 border border-white/20 rounded-lg px-8 py-4 shadow-lg">
+    <nav className="fixed left-0 top-0 w-full backdrop-blur-sm bg-black/30 border border-black/20 rounded-lg px-8 py-4 shadow-lg">
       <div className="flex justify-between items-center">
-        <img src={logo} className="w-12 h-12" alt="logo" />
+        <img src={logo} className="w-72 h-12" alt="logo" />
         <div className="hidden md:flex space-x-4">
           <Link
             href="/"
-            className={`text-gray-800 hover:text-gray-600 ${
-              activeLink === "/" ? "text-white" : ""
+            className={`text-gray-100 hover:text-gray-600 ${
+              activeLink === "/" ? "text-gray-500" : ""
             }`}
             onClick={() => handleLinkClick("/")}
           >
@@ -42,8 +42,8 @@ const Navbar = () => {
 
           <Link
             href="/services"
-            className={`text-gray-800 hover:text-gray-600 ${
-              activeLink === "/services" ? "text-white" : ""
+            className={`text-gray-100 hover:text-gray-600 ${
+              activeLink === "/services" ? "text-gray-500" : ""
             }`}
             onClick={() => handleLinkClick("/services")}
           >
@@ -51,8 +51,8 @@ const Navbar = () => {
           </Link>
           <Link
             href="/about"
-            className={`text-gray-800 hover:text-gray-600 ${
-              activeLink === "/about" ? "text-white" : ""
+            className={`text-gray-100 hover:text-gray-600 ${
+              activeLink === "/about" ? "text-gray-500" : ""
             }`}
             onClick={() => handleLinkClick("/about")}
           >
@@ -60,8 +60,8 @@ const Navbar = () => {
           </Link>
           <Link
             href="/contact"
-            className={`text-gray-800 hover:text-gray-600 ${
-              activeLink === "/contact" ? "text-white" : ""
+            className={`text-gray-100 hover:text-gray-600 ${
+              activeLink === "/contact" ? "text-gray-500" : ""
             }`}
             onClick={() => handleLinkClick("/contact")}
           >
