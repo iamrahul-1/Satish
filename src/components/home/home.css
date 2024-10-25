@@ -1,0 +1,10 @@
+.bg {
+  background: url(./bg.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.btn {
+  margin-top: auto;
+  margin-bottom: 20px;
+}
