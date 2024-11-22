@@ -13,6 +13,12 @@ import About from "./pages/about/About.jsx";
 import Contact from "./pages/contact/Contact.jsx";
 import Work from "./pages/work/Work.jsx";
 import NotFound from "./pages/notFound/NotFound.jsx";
+import Logo from "./pages/imageSection/Logo.jsx";
+import Wedding from "./pages/imageSection/Wedding.jsx";
+import WeddingAlbum from "./pages/imageSection/WeddingAlbum.jsx";
+import ProductPresentation from "./pages/imageSection/ProductPresentation.jsx";
+import ImageToVector from "./pages/imageSection/ImageToVector.jsx";
+import Brochure from "./pages/imageSection/Brochure.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,6 +27,12 @@ const router = createBrowserRouter(
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/work" element={<Work />} />
+      <Route path="/logo" element={<Logo />} />
+      <Route path="/wedding" element={<Wedding />} />
+      <Route path="/wedding-album" element={<WeddingAlbum />} />
+      <Route path="/product-presentation" element={<ProductPresentation />} />
+      <Route path="/image-to-vector" element={<ImageToVector />} />
+      <Route path="/brochure" element={<Brochure />} />
       <Route path="*" element={<NotFound />} />
     </Route>
   )
