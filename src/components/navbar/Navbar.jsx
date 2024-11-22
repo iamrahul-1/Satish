@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BiCamera, BiCameraOff, BiUser } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
+
 import logo from "../../assets/Asset-1.ico";
 import { FaBars, FaTimes } from "react-icons/fa";
 
