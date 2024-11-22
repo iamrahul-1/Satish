@@ -47,7 +47,7 @@ const Navbar = () => {
   }, [isDropdownOpen]);
 
   return (
-    <nav className="fixed left-0 top-0 w-full bg-zinc-900 border border-zinc-800 px-2 py-4 shadow-lg">
+    <nav className="fixed left-0 top-0 w-full bg-zinc-900 border border-zinc-800 px-2 py-4 shadow-lg z-30">
       <div className="flex justify-between items-center px-4 md:px-8">
         <img src={logo} className="hidden md:block w-auto h-9" alt="logo" />
         <div className="md:hidden relative">
