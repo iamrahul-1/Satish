@@ -1,17 +1,13 @@
 import { useState, useEffect } from "react";
 import { BiCamera, BiCameraOff, BiUser } from "react-icons/bi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/Asset-1.ico";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("/");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
-  const handleLinkClick = (link) => {
-    setActiveLink(link);
-  };
 
   const handleDropdownClick = (e) => {
     e.stopPropagation();
@@ -100,14 +96,13 @@ const Navbar = () => {
           <Link
             to="/"
             className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
-              activeLink === "/" ? "active-link" : ""
+              location.pathname === "/" ? "active-link" : ""
             }`}
-            onClick={() => handleLinkClick("/")}
           >
             Home
             <span
               className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
-                activeLink === "/" ? "scale-x-100" : "scale-x-0"
+                location.pathname === "/" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
           </Link>
@@ -115,14 +110,13 @@ const Navbar = () => {
           <Link
             to="/work"
             className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
-              activeLink === "/work" ? "active-link" : ""
+              location.pathname === "/work" ? "active-link" : ""
             }`}
-            onClick={() => handleLinkClick("/work")}
           >
             Work
             <span
               className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
-                activeLink === "/work" ? "scale-x-100" : "scale-x-0"
+                location.pathname === "/work" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
           </Link>
@@ -130,14 +124,13 @@ const Navbar = () => {
           <Link
             to="/about"
             className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
-              activeLink === "/about" ? "active-link" : ""
+              location.pathname === "/about" ? "active-link" : ""
             }`}
-            onClick={() => handleLinkClick("/about")}
           >
             About
             <span
               className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
-                activeLink === "/about" ? "scale-x-100" : "scale-x-0"
+                location.pathname === "/about" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
           </Link>
@@ -145,14 +138,13 @@ const Navbar = () => {
           <Link
             to="/contact"
             className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
-              activeLink === "/contact" ? "active-link" : ""
+              location.pathname === "/contact" ? "active-link" : ""
             }`}
-            onClick={() => handleLinkClick("/contact")}
           >
             Contact
             <span
               className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
-                activeLink === "/contact" ? "scale-x-100" : "scale-x-0"
+                location.pathname === "/contact" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
           </Link>
@@ -222,10 +214,9 @@ const Navbar = () => {
             <Link
               to="/"
               className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                activeLink === "/" ? "border-b-2 border-white" : ""
+                location.pathname === "/" ? "border-b-2 border-white" : ""
               }`}
               onClick={() => {
-                handleLinkClick("/");
                 setIsOpen(false);
               }}
             >
@@ -234,10 +225,9 @@ const Navbar = () => {
             <Link
               to="/work"
               className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                activeLink === "/work" ? "border-b-2 border-white" : ""
+                location.pathname === "/work" ? "border-b-2 border-white" : ""
               }`}
               onClick={() => {
-                handleLinkClick("/work");
                 setIsOpen(false);
               }}
             >
@@ -246,10 +236,9 @@ const Navbar = () => {
             <Link
               to="/about"
               className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                activeLink === "/about" ? "border-b-2 border-white" : ""
+                location.pathname === "/about" ? "border-b-2 border-white" : ""
               }`}
               onClick={() => {
-                handleLinkClick("/about");
                 setIsOpen(false);
               }}
             >
@@ -258,10 +247,11 @@ const Navbar = () => {
             <Link
               to="/contact"
               className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                activeLink === "/contact" ? "border-b-2 border-white" : ""
+                location.pathname === "/contact"
+                  ? "border-b-2 border-white"
+                  : ""
               }`}
               onClick={() => {
-                handleLinkClick("/contact");
                 setIsOpen(false);
               }}
             >
