@@ -16,7 +16,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white text-xs sm:text-xs md:text-xs lg:text-sm font-light tracking-wider uppercase"
+          className=" text-xs sm:text-xs md:text-xs lg:text-sm font-light tracking-wider uppercase"
         >
           <h6>design & photographer</h6>
         </motion.h6>
@@ -24,7 +24,7 @@ const Home = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-white text-lg my-4 md:text-lg lg:text-lg font-light tracking-wider uppercase"
+          className=" text-lg my-4 md:text-lg lg:text-lg font-light tracking-wider uppercase"
         >
           Creative Elements
         </motion.h4>
@@ -34,25 +34,85 @@ const Home = () => {
           penatibus et magnis dis parturient montes viverra quis, feugiat.
         </motion.p>
       </div>
-      <div className="mt-16 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 mx-6">
-        <motion.div className="relative">
-          <img src={img1} alt="Description" className="w-full h-auto" />
-        </motion.div>
-        <motion.div className="relative">
-          <img src={img2} alt="Description" className="w-full h-auto" />
-        </motion.div>
-        <motion.div className="relative">
-          <img src={img3} alt="Description" className="w-full h-auto" />
-        </motion.div>
-        <motion.div className="relative">
-          <img src={img4} alt="Description" className="w-full h-auto" />
-        </motion.div>
-        <motion.div className="relative">
-          <img src={img5} alt="Description" className="w-full h-auto" />
-        </motion.div>
-        <motion.div className="relative">
-          <img src={img6} alt="Description" className="w-full h-auto" />
-        </motion.div>
+      <div className="mt-16 flex justify-center">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 w-full max-w-5xl">
+          {/* Large Image 1 */}
+          <motion.div className="relative col-span-2 group">
+            <img
+              src={img1}
+              alt="Image 1"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Logo Design</span>
+            </div>
+          </motion.div>
+          {/* Small Image 1 */}
+          <motion.div className="relative group">
+            <img
+              src={img2}
+              alt="Image 2"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Wedding Album</span>
+            </div>
+          </motion.div>
+          {/* Small Image 2 */}
+          <motion.div className="relative group">
+            <img
+              src={img3}
+              alt="Image 3"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Product</span>
+            </div>
+          </motion.div>
+          {/* Large Image 2 */}
+          <motion.div className="relative col-span-2 group">
+            <img
+              src={img4}
+              alt="Image 4"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Wedding Photography</span>
+            </div>
+          </motion.div>
+          {/* Small Image 3 */}
+          <motion.div className="relative group">
+            <img
+              src={img5}
+              alt="Image 5"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Image to Vector</span>
+            </div>
+          </motion.div>
+          {/* Small Image 4 */}
+          <motion.div className="relative group">
+            <img
+              src={img6}
+              alt="Image 6"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">Broucher Design</span>
+            </div>
+          </motion.div>{" "}
+          <motion.div className="relative sm:col-span-1 group">
+            <img
+              src={img2}
+              alt="Image 2"
+              className="w-full h-[40rem] object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-white text-lg">IG Posts</span>
+            </div>
+          </motion.div>
+        </div>
       </div>
     </div>
   );
