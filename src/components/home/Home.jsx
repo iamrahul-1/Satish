@@ -1,42 +1,7 @@
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import image1 from "../../assets/1.jpg";
-import image2 from "../../assets/2.jpg";
-import image3 from "../../assets/3.jpg";
-import { FaPlus } from "react-icons/fa";
+import { motion } from "framer-motion";
 import Slider from "./Slider";
 
 const Home = () => {
-  const images = [image1, image2, image3];
-
-  const imageFeatures = [
-    {
-      title: "Wedding Album",
-      // description: "Description for first image",
-    },
-    {
-      title: "Visiting Cards",
-      // description: "Description for second image",
-    },
-    {
-      title: "Logos",
-      // description: "Description for third image",
-    },
-  ];
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  // Auto scroll with smooth transitions
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) =>
-        prevIndex === images.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 3000); // 5 seconds per slide
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
     <div>
       <Slider />
