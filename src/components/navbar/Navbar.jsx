@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { BiCamera, BiCameraOff } from "react-icons/bi";
 import { Link } from "react-router-dom";
-// import logo from "./../../assets/logo.png";
 import logo from "../../assets/Asset-1.ico";
 
 const Navbar = () => {
