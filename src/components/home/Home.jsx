@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <Slider />
-      <div className="absolute bottom-0 left-0 w-full text-center">
+      <div className="mt-16 bottom-0 left-0 w-full text-center">
         <motion.h6
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

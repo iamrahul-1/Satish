@@ -33,10 +33,10 @@ const Slider = () => {
     }, 3000); // 5 seconds per slide
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
   return (
     <div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-900 -z-10 fixed top-0 left-0 w-full">
+      <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-900 -z-10 top-0 left-0 w-full">
         <div className="w-full">
           <div className="relative" data-carousel="slide">
             <div className="relative h-48 sm:h-64 md:h-[400px] lg:h-[600px] xl:h-screen overflow-hidden">
