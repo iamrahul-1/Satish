@@ -6,6 +6,7 @@ import img4 from "../../assets/w4.jpg";
 import img5 from "../../assets/w5.jpg";
 import img6 from "../../assets/w6.jpg";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const projects = [
   { img: img1, title: "Logo Design", link: "/logo" },
@@ -28,30 +29,37 @@ const Work = () => {
   }, []);
 
   return (
-    <div
+    <motion.div
       className={`container mx-auto p-8 my-16 transition-opacity duration-1000 ${
         isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {projects.map((project, index) => (
-          <Link to={project.link} key={index} className="block">
-            <div className="relative group shadow-md hover:-translate-y-1 transition-transform duration-200 rounded-md overflow-hidden">
-              <img
-                src={project.img}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
-                <p className="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {project.title}
-                </p>
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+          >
+            <Link to={project.link} className="block">
+              <div className="relative group shadow-md hover:-translate-y-1 transition-transform duration-200 rounded-md overflow-hidden">
+                <img
+                  src={project.img}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-all duration-300 flex items-center justify-center">
+                  <p className="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {project.title}
+                  </p>
+                </div>
               </div>
-            </div>
-          </Link>
+            </Link>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 
