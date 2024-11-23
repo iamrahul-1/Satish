@@ -18,7 +18,7 @@ const Home = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className=" text-xs sm:text-xs md:text-xs lg:text-sm font-light tracking-wider uppercase"
         >
-          <h6>design & photographer</h6>
+          <p>design & photographer</p>
         </motion.h6>
         <motion.h4
           initial={{ opacity: 0, y: 20 }}
@@ -28,7 +28,7 @@ const Home = () => {
         >
           Creative Elements
         </motion.h4>
-        <motion.p className="text-xs md:text-xs lg:text-xs font-light leading-relaxed text-center mx-4 p-4 w-[70%] rounded-lg uppercase justify-center">
+        <motion.p className="text-xs md:text-xs lg:text-xs font-light leading-relaxed text-center mx-4 p-4 rounded-lg uppercase justify-center">
           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
           commodo ligula eget dolor. Aenean massa. Cum sociis Theme natoque
           penatibus et magnis dis parturient montes viverra quis, feugiat.

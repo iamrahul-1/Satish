@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "../../assets/sky.jpeg";
 import notFound from "../../assets/404.png";
 import { Link } from "react-router-dom";
