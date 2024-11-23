@@ -48,7 +48,7 @@ const Home = () => {
             </div>
           </motion.div>
           {/* Small Image 1 */}
-          <motion.div className="relative group">
+          <motion.div className="relative w-full group">
             <img
               src={img2}
               alt="Image 2"
@@ -59,7 +59,7 @@ const Home = () => {
             </div>
           </motion.div>
           {/* Small Image 2 */}
-          <motion.div className="relative group">
+          <motion.div className="relative w-full group">
             <img
               src={img3}
               alt="Image 3"
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </motion.div>
           {/* Small Image 3 */}
-          <motion.div className="relative group">
+          <motion.div className="relative w-full group">
             <img
               src={img5}
               alt="Image 5"
@@ -92,7 +92,7 @@ const Home = () => {
             </div>
           </motion.div>
           {/* Small Image 4 */}
-          <motion.div className="relative group">
+          <motion.div className="relative w-full group">
             <img
               src={img6}
               alt="Image 6"
@@ -101,8 +101,9 @@ const Home = () => {
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Broucher Design</span>
             </div>
-          </motion.div>{" "}
-          <motion.div className="relative sm:col-span-1 group">
+          </motion.div>
+          {/* IG Posts Image */}
+          <motion.div className="relative w-full group">
             <img
               src={img2}
               alt="Image 2"
@@ -110,6 +111,12 @@ const Home = () => {
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">IG Posts</span>
+            </div>
+          </motion.div>
+          {/* Hidden post */}
+          <motion.div className="relative w-full h-[40rem] group lg:hidden md:block sm:block">
+            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+              <span className="text-black text-lg">And Many More</span>
             </div>
           </motion.div>
         </div>
