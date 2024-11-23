@@ -29,8 +29,8 @@ const Work = () => {
 
   return (
     <div
-      className={`container mx-auto p-8 my-16 transition-all duration-1000 transform ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      className={`container mx-auto p-8 my-16 transition-opacity duration-1000 ${
+        isVisible ? "opacity-100" : "opacity-0"
       }`}
     >
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
