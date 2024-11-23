@@ -35,7 +35,7 @@ const Home = () => {
         </motion.p>
       </div>
       <div className="mt-16 flex justify-center">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 w-full max-w-5xl">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 w-full max-w-7xl">
           {/* Large Image 1 */}
           <motion.div className="relative col-span-2 group">
             <img
