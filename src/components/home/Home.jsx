@@ -41,7 +41,7 @@ const Home = () => {
             <img
               src={img1}
               alt="Image 1"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Logo Design</span>
@@ -52,7 +52,7 @@ const Home = () => {
             <img
               src={img2}
               alt="Image 2"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Wedding Album</span>
@@ -63,7 +63,7 @@ const Home = () => {
             <img
               src={img3}
               alt="Image 3"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Product</span>
@@ -74,7 +74,7 @@ const Home = () => {
             <img
               src={img4}
               alt="Image 4"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Wedding Photography</span>
@@ -85,7 +85,7 @@ const Home = () => {
             <img
               src={img5}
               alt="Image 5"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Image to Vector</span>
@@ -96,7 +96,7 @@ const Home = () => {
             <img
               src={img6}
               alt="Image 6"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">Broucher Design</span>
@@ -107,7 +107,7 @@ const Home = () => {
             <img
               src={img2}
               alt="Image 2"
-              className="w-full h-[40rem] object-cover"
+              className="w-full h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
               <span className="text-white text-lg">IG Posts</span>
