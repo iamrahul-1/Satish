@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { BiCamera, BiCameraOff, BiUser } from "react-icons/bi";
 import { Link, useLocation } from "react-router-dom";
 
-import logo from "../../assets/Asset-1.ico";
+import logo from "../../assets/logomain.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -44,9 +44,13 @@ const Navbar = () => {
   }, [isDropdownOpen]);
 
   return (
-    <nav className="fixed left-0 top-0 w-full bg-zinc-900 border border-zinc-800 px-2 py-4 shadow-lg z-30">
+    <nav className="fixed left-0 top-0 w-full bg-zinc-900 bg-opacity-50 backdrop-blur-lg shadow-lg z-30">
       <div className="flex justify-between items-center px-4 md:px-8">
-        <img src={logo} className="hidden md:block w-auto h-9" alt="logo" />
+        <img
+          src={logo}
+          className="hidden md:block w-auto h-16 p-2"
+          alt="logo"
+        />
         <div className="md:hidden relative">
           <button
             onClick={handleDropdownClick}
@@ -96,7 +100,7 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
           <Link
             to="/"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
+            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
               location.pathname === "/" ? "active-link" : ""
             }`}
           >
@@ -110,7 +114,7 @@ const Navbar = () => {
 
           <Link
             to="/work"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
+            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
               location.pathname === "/work" ? "active-link" : ""
             }`}
           >
@@ -124,7 +128,7 @@ const Navbar = () => {
 
           <Link
             to="/about"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
+            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
               location.pathname === "/about" ? "active-link" : ""
             }`}
           >
@@ -138,7 +142,7 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 ${
+            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
               location.pathname === "/contact" ? "active-link" : ""
             }`}
           >

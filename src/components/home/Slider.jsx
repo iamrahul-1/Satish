@@ -30,108 +30,50 @@ const Slider = () => {
       setCurrentIndex((prevIndex) =>
         prevIndex === images.length - 1 ? 0 : prevIndex + 1
       );
-    }, 3000); // 5 seconds per slide
+    }, 5000); // 3 seconds per slide
 
     return () => clearInterval(interval);
   }, [images.length]);
+
   return (
-    <div>
-      <div className="flex flex-col items-center justify-center min-h-screen bg-zinc-900 -z-10 top-0 left-0 w-full">
-        <div className="w-full">
-          <div className="relative" data-carousel="slide">
-            <div className="relative h-48 sm:h-64 md:h-[400px] lg:h-[600px] xl:h-screen overflow-hidden">
-              <AnimatePresence mode="wait">
+    <div className="w-full">
+      <div className="flex flex-col items-center justify-center md:h-screen h-auto flex-grow bg-zinc-900 -z-10 w-full">
+        <div className="relative w-full overflow-hidden">
+          <div className="relative w-full h-48 sm:h-64 md:h-[400px] lg:h-[600px] xl:h-screen">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentIndex}
+                initial={{ opacity: 0, scale: 1.1 }}
+                animate={{ opacity: 1, scale: 1 }}
+                exit={{ opacity: 0, scale: 0.9 }}
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                className="absolute w-full h-full"
+              >
+                <img
+                  src={images[currentIndex]}
+                  alt={`Slide ${currentIndex + 1}`}
+                  className="w-full h-full object-cover"
+                />
+                {/* Modern Text Overlay with Gradient */}
                 <motion.div
-                  key={currentIndex}
-                  initial={{ opacity: 0, scale: 1.1 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={{ opacity: 0, scale: 0.9 }}
-                  transition={{ duration: 0.7, ease: "easeInOut" }}
-                  className="absolute w-full h-full"
+                  initial={{ opacity: 0, y: 50 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3, duration: 0.5 }}
+                  className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col items-center justify-end pb-20"
                 >
-                  <img
-                    src={images[currentIndex]}
-                    alt={`Slide ${currentIndex + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                  {/* Modern Text Overlay with Gradient */}
-                  <motion.div
-                    initial={{ opacity: 0, y: 50 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.3, duration: 0.5 }}
-                    className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent flex flex-col items-center justify-end pb-20"
+                  <motion.h2
+                    initial={{ y: 20, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ delay: 0.5, duration: 0.5 }}
+                    className="text-3xl md:text-5xl lg:text-9xl font-bold text-white mb-20 tracking-wider mestika"
                   >
-                    <motion.h2
-                      initial={{ y: 20, opacity: 0 }}
-                      animate={{ y: 0, opacity: 1 }}
-                      transition={{ delay: 0.5, duration: 0.5 }}
-                      className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-wider"
-                    >
-                      {imageFeatures[currentIndex].title}
-                    </motion.h2>
-                  </motion.div>
+                    {imageFeatures[currentIndex].title}
+                  </motion.h2>
                 </motion.div>
-              </AnimatePresence>
-
-              {/* Navigation Buttons */}
-              {/* <motion.button
-              whileHover={{
-                scale: 1.1,
-                backgroundColor: "rgba(255, 255, 255, 0.15)",
-              }}
-              whileTap={{ scale: 0.9 }}
-              className="absolute top-1/2 left-6 -translate-y-1/2 z-30 
-                flex items-center justify-center w-12 h-12 md:w-14 md:h-14
-                rounded-full bg-white/10 backdrop-blur-lg
-                transition-all duration-300 group"
-              onClick={handlePrev}
-            >
-              <svg
-                className="w-6 h-6 text-white transition-transform duration-300 group-hover:-translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M15 19l-7-7 7-7"
-                />
-              </svg>
-            </motion.button> */}
-
-              {/* <motion.button
-              whileHover={{
-                scale: 1.1,
-                backgroundColor: "rgba(255, 255, 255, 0.15)",
-              }}
-              whileTap={{ scale: 0.9 }}
-              className="absolute top-1/2 right-6 -translate-y-1/2 z-30 
-                flex items-center justify-center w-12 h-12 md:w-14 md:h-14
-                rounded-full bg-white/10 backdrop-blur-lg
-                transition-all duration-300 group"
-              onClick={handleNext}
-            >
-              <svg
-                className="w-6 h-6 text-white transition-transform duration-300 group-hover:translate-x-1"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M9 5l7 7-7 7"
-                />
-              </svg>
-            </motion.button> */}
-            </div>
+              </motion.div>
+            </AnimatePresence>
           </div>
         </div>
-
-        {/* Text Section Below Carousel */}
       </div>
     </div>
   );
