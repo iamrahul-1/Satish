@@ -44,8 +44,8 @@ const Navbar = () => {
   }, [isDropdownOpen]);
 
   return (
-    <nav className="fixed left-0 top-0 w-full bg-zinc-900 bg-opacity-50 backdrop-blur-lg shadow-lg z-30">
-      <div className="flex justify-between items-center px-4 md:px-8">
+    <nav className="fixed left-0 top-0 w-full bg-opacity-50 backdrop-blur-lg shadow-lg z-30 h-16">
+      <div className="flex justify-between h-full items-center px-4 md:px-8">
         <img
           src={logo}
           className="hidden md:block w-auto h-16 p-2"
@@ -106,7 +106,7 @@ const Navbar = () => {
           >
             Home
             <span
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
+              className={`absolute bottom-0 left-0 w-1/2 h-0.5 bg-white transform origin-left transition-transform duration-300 ${
                 location.pathname === "/" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -120,7 +120,7 @@ const Navbar = () => {
           >
             Work
             <span
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
+              className={`absolute bottom-0 left-0 w-1/2 h-0.5 bg-white transform origin-left transition-transform duration-300 ${
                 location.pathname === "/work" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -134,7 +134,7 @@ const Navbar = () => {
           >
             About
             <span
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
+              className={`absolute bottom-0 left-0 w-1/2 h-0.5 bg-white transform origin-left transition-transform duration-300 ${
                 location.pathname === "/about" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -148,7 +148,7 @@ const Navbar = () => {
           >
             Contact
             <span
-              className={`absolute bottom-0 left-0 w-full h-0.5 bg-white transform origin-left transition-transform duration-300 ${
+              className={`absolute bottom-0 left-0 w-1/2 h-0.5 bg-white transform origin-left transition-transform duration-300 ${
                 location.pathname === "/contact" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -215,11 +215,11 @@ const Navbar = () => {
       </div>
       {isOpen && (
         <div className="md:hidden mt-4">
-          <div className="flex flex-col items-center space-y-4 px-2 pt-2 pb-3">
+          <div className="flex flex-col items-center space-y-4 px-2 pt-4 pb-3">
             <Link
               to="/"
               className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                location.pathname === "/" ? "border-b-2 border-white" : ""
+                location.pathname === "/" ? "md:border-b-2 border-white" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
