@@ -121,11 +121,11 @@ const Home = () => {
             </div>
           </motion.div>
           {/* Hidden post */}
-          <motion.div className="relative w-full h-[40rem] group lg:hidden md:block sm:block">
+          {/* <motion.div className="relative w-full h-[40rem] group lg:hidden md:block sm:block">
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-black text-lg">And Many More</span>
+              <span className="text-white text-lg">And Many More</span>
             </div>
-          </motion.div>
+          </motion.div> */}
         </div>
       </div>
     </div>
