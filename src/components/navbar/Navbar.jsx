@@ -53,13 +53,13 @@ const Navbar = () => {
 
   // Render the navbar
   return (
-    <nav className="fixed left-0 top-0 w-full bg-opacity-50 backdrop-blur-lg shadow-lg z-30 h-16">
+    <nav className="fixed left-0 bg-slate-200 top-0 w-full bg-opacity-50 backdrop-blur-lg shadow-lg z-30 h-16">
       <div className="flex justify-between h-full items-center px-4 md:px-8">
         {/* Mobile dropdown button */}
         <div className="md:hidden relative">
           <button
             onClick={handleDropdownClick}
-            className="text-gray-100 hover:text-gray-600"
+            className="text-gray-800 hover:text-gray-900"
           >
             <BiUser className="text-2xl" />
           </button>
@@ -76,7 +76,7 @@ const Navbar = () => {
         <div className="md:hidden">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="text-gray-200 hover:text-gray-600"
+            className="text-gray-800 hover:text-gray-900"
           >
             {isOpen ? (
               <FaTimes className="text-2xl" />
@@ -89,13 +89,13 @@ const Navbar = () => {
         <div className="hidden md:flex space-x-8 absolute left-1/2 transform -translate-x-1/2">
           <Link
             to="/"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
+            className={`text-gray-800 hover:text-gray-700 relative pb-1 text-lg ${
               location.pathname === "/" ? "active-link" : ""
             }`}
           >
             Home
             <span
-              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-white transition-transform duration-300 ${
+              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg- transition-transform duration-300 ${
                 location.pathname === "/" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -103,13 +103,13 @@ const Navbar = () => {
 
           <Link
             to="/work"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
+            className={`text-gray-800 hover:text-gray-700 relative pb-1 text-lg ${
               location.pathname === "/work" ? "active-link" : ""
             }`}
           >
             Work
             <span
-              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-white transition-transform duration-300 ${
+              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg- transition-transform duration-300 ${
                 location.pathname === "/work" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -117,13 +117,13 @@ const Navbar = () => {
 
           <Link
             to="/about"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
+            className={`text-gray-800 hover:text-gray-700 relative pb-1 text-lg ${
               location.pathname === "/about" ? "active-link" : ""
             }`}
           >
             About
             <span
-              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-white transition-transform duration-300 ${
+              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg- transition-transform duration-300 ${
                 location.pathname === "/about" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -131,13 +131,13 @@ const Navbar = () => {
 
           <Link
             to="/contact"
-            className={`text-gray-100 hover:text-gray-400 relative pb-1 text-lg ${
+            className={`text-gray-800 hover:text-gray-700 relative pb-1 text-lg ${
               location.pathname === "/contact" ? "active-link" : ""
             }`}
           >
             Contact
             <span
-              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg-white transition-transform duration-300 ${
+              className={`absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1/2 h-0.5 bg- transition-transform duration-300 ${
                 location.pathname === "/contact" ? "scale-x-100" : "scale-x-0"
               }`}
             ></span>
@@ -147,7 +147,7 @@ const Navbar = () => {
         <div className="hidden md:block relative">
           <button
             onClick={handleDropdownClick}
-            className="text-gray-100 hover:text-gray-600"
+            className="text-gray-800 hover:text-gray-900"
           >
             <BiUser className="text-2xl" />
           </button>
@@ -194,12 +194,12 @@ const Navbar = () => {
       </div>
       {/* Mobile navigation links */}
       {isOpen && (
-        <div className="md:hidden bg-slate-800">
+        <div className="md:hidden bg-slate-200">
           <div className="flex flex-col items-center space-y-4 px-2 pt-4 pb-3">
             <Link
               to="/"
-              className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                location.pathname === "/" ? "md:border-b-2 border-white" : ""
+              className={`text-gray-800 hover:text-gray-700 w-full text-center py-2 ${
+                location.pathname === "/" ? "md:border-b-2 border-" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -209,10 +209,8 @@ const Navbar = () => {
             </Link>
             <Link
               to="/work"
-              className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                location.pathname === "/work"
-                  ? "md:border-b-2 border-white"
-                  : ""
+              className={`text-gray-800 hover:text-gray-700 w-full text-center py-2 ${
+                location.pathname === "/work" ? "md:border-b-2 border-" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -222,10 +220,8 @@ const Navbar = () => {
             </Link>
             <Link
               to="/about"
-              className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                location.pathname === "/about"
-                  ? "md:border-b-2 border-white"
-                  : ""
+              className={`text-gray-800 hover:text-gray-700 w-full text-center py-2 ${
+                location.pathname === "/about" ? "md:border-b-2 border-" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);
@@ -235,10 +231,8 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contact"
-              className={`text-gray-100 hover:text-gray-400 w-full text-center py-2 ${
-                location.pathname === "/contact"
-                  ? "md:border-b-2 border-white"
-                  : ""
+              className={`text-gray-800 hover:text-gray-700 w-full text-center py-2 ${
+                location.pathname === "/contact" ? "md:border-b-2 border-" : ""
               }`}
               onClick={() => {
                 setIsOpen(false);

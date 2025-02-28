@@ -22,7 +22,7 @@ const Home = () => {
           <p>Creative Graphic Designer & Visual Artist</p>
         </motion.h6>
 
-        <motion.p className="text-sm md:text-base font-light leading-relaxed text-center mx-4 p-4 text-gray-300">
+        <motion.p className="text-sm md:text-base font-light leading-relaxed text-center mx-4 p-4 text-gray-800">
           Specializing in photography, logo design, and digital illustrations.
           Let's bring your vision to life with unique and innovative designs.
         </motion.p>
@@ -41,16 +41,16 @@ const Home = () => {
         </motion.div>
       </div>
       <div className="mt-16 flex justify-center">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 w-full">
+        <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 w-full px-4 md:px-6 lg:px-0">
           {/* Large Image 1 */}
-          <motion.div className="relative col-span-2 group">
+          <motion.div className="relative lg:col-span-2 md:col-span-2 col-span-1 group">
             <img
               src={img1}
               alt="Image 1"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Logo Design</span>
+              <span className="text-white text-lg md:text-xl">Logo Design</span>
             </div>
           </motion.div>
 
@@ -59,10 +59,12 @@ const Home = () => {
             <img
               src={img2}
               alt="Image 2"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Wedding Album</span>
+              <span className="text-white text-lg md:text-xl">
+                Wedding Album
+              </span>
             </div>
           </motion.div>
           {/* Small Image 2 */}
@@ -70,21 +72,23 @@ const Home = () => {
             <img
               src={img3}
               alt="Image 3"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Product</span>
+              <span className="text-white text-lg md:text-xl">Product</span>
             </div>
           </motion.div>
           {/* Large Image 2 */}
-          <motion.div className="relative col-span-2 group">
+          <motion.div className="relative lg:col-span-2 md:col-span-2 col-span-1 group">
             <img
               src={img4}
               alt="Image 4"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Flyer Design</span>
+              <span className="text-white text-lg md:text-xl">
+                Flyer Design
+              </span>
             </div>
           </motion.div>
           {/* Small Image 3 */}
@@ -92,10 +96,12 @@ const Home = () => {
             <img
               src={img5}
               alt="Image 5"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Wedding Photoshoot</span>
+              <span className="text-white text-lg md:text-xl">
+                Wedding Photoshoot
+              </span>
             </div>
           </motion.div>
           {/* Small Image 4 */}
@@ -103,29 +109,27 @@ const Home = () => {
             <img
               src={img6}
               alt="Image 6"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Banner Design</span>
+              <span className="text-white text-lg md:text-xl">
+                Banner Design
+              </span>
             </div>
           </motion.div>
           {/* IG Posts Image */}
-          <motion.div className="relative w-full group">
+          <motion.div className="relative w-full md:col-span-2 lg:col-span-1 group">
             <img
               src={img7}
               alt="Image 2"
-              className="w-full h-[40rem] object-cover rounded-lg"
+              className="w-full h-[20rem] md:h-[30rem] lg:h-[40rem] object-cover rounded-lg"
             />
             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">Mockup Design</span>
+              <span className="text-white text-lg md:text-xl">
+                Mockup Design
+              </span>
             </div>
           </motion.div>
-          {/* Hidden post */}
-          {/* <motion.div className="relative w-full h-[40rem] group lg:hidden md:block sm:block">
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg">And Many More</span>
-            </div>
-          </motion.div> */}
         </div>
       </div>
     </div>

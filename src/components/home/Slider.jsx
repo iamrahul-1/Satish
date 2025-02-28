@@ -36,8 +36,8 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="w-full">
-      <div className="flex flex-col items-center justify-center md:h-screen h-auto flex-grow bg-zinc-900 -z-10 w-full">
+    <div className="w-full mt-[4rem]">
+      <div className="flex flex-col items-center justify-center lg:h-screen h-auto flex-grow bg-zinc-900 -z-10 w-full">
         <div className="relative w-full overflow-hidden">
           <div className="relative w-full h-48 sm:h-64 md:h-[400px] lg:h-[600px] xl:h-screen">
             <AnimatePresence mode="wait">
@@ -65,7 +65,7 @@ const Slider = () => {
                     initial={{ y: 20, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.5, duration: 0.5 }}
-                    className="text-3xl md:text-5xl lg:text-9xl font-bold text-white mb-20 tracking-wider mestika"
+                    className="text-3xl md:text-5xl lg:text-9xl font-bold text-white md:mb-20 tracking-wider mestika"
                   >
                     {imageFeatures[currentIndex].title}
                   </motion.h2>

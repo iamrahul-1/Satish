@@ -9,7 +9,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const About = () => {
   return (
     <div className="w-full mt-12 text-white h-auto md:h-[110vh]">
-      <div className="flex flex-col items-center justify-center md:h-screen h-auto flex-grow px-4">
+      <div className="flex flex-col items-center justify-center md:h-screen h-auto flex-grow px-4 text-gray-800">
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm md:text-base font-light leading-relaxed text-center mx-4 p-4 mt-4"
+          className="text-sm md:text-base font-light leading-relaxed text-center mx-4 p-4 mt-4 text-gray-700"
         >
           Hello! I'm a passionate graphic designer and photographer with a keen
           eye for detail and creativity. With a deep love for visual
@@ -45,7 +45,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm md:text-base font-light leading-relaxed mx-4 md:mx-64 p-4 mt-4 text-left"
+          className="text-sm md:text-base font-light leading-relaxed mx-4 md:mx-64 p-4 mt-4 text-left text-gray-700"
         >
           🎨 Graphic Design: Logo creation, branding, and marketing materials.
           <br />
@@ -71,7 +71,7 @@ const About = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-sm flex items-center md:justify-center md:text-base font-light leading-relaxed mx-4 md:mx-64 p-4 w-full mt-5 text-left flex-wrap gap-2"
+          className="text-sm flex items-center md:justify-center md:text-base font-light leading-relaxed mx-4 md:mx-64 p-4 w-full mt-5 text-left flex-wrap gap-2 text-gray-700"
         >
           <div>
             <FontAwesomeIcon icon={faEnvelope} className="text-2xl pr-3" />{" "}
@@ -86,7 +86,7 @@ const About = () => {
             Jailrod Chandrakala, Jaiplaza Complex, Mangrol, Gujarat-362225
           </div>
         </motion.p>
-        Let’s bring your vision to life!
+        Let's bring your vision to life!
         <motion.div
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
@@ -95,7 +95,7 @@ const About = () => {
         >
           <a
             href="/contact"
-            className="bg-gray-800 text-white px-6 py-3 rounded-lg uppercase tracking-wider font-medium hover:bg-gray-700 transition duration-300 "
+            className="bg-gray-300 text-gray-900 px-6 py-3 rounded-lg uppercase tracking-wider font-medium hover:bg-gray-200 transition duration-300 "
           >
             Get in Touch
           </a>
